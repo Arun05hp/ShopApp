@@ -5,11 +5,11 @@ const CartItem = (props) => {
   return (
     <View style={styles.cartItem}>
       <Text style={styles.itemData}>
-        <Text style={styles.quantity}>QTY</Text>
-        <Text style={styles.mainText}>TITLE</Text>
+        <Text style={styles.quantity}>{props.quantity} </Text>
+        <Text style={styles.mainText}>{props.title}</Text>
       </Text>
       <View style={styles.itemData}>
-        <Text style={styles.mainText}>$AMT</Text>
+        <Text style={styles.mainText}>${props.amount.toFixed(2)}</Text>
         <TouchableOpacity onPress={props.onRemove} style={styles.deleteButton}>
           <Ionicons name={"md-trash"} size={23} color={"red"} />
         </TouchableOpacity>
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default cartItem;
+export default CartItem;
