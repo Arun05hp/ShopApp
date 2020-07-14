@@ -10,6 +10,7 @@ import CartScreen from "../screens/shop/CartScreen";
 import OrdersScreen from "../screens/shop/OrdersScreen";
 import { Ionicons } from "@expo/vector-icons";
 import UserProductScreen from "../screens/user/UserProductScreen";
+import EditProdcutScreen from "../screens/user/EditProductScreen";
 
 const defaultNavOptions = {
   headerStyle: {
@@ -56,6 +57,7 @@ const OrderNavigator = createStackNavigator(
 const AdminNavigator = createStackNavigator(
   {
     UserProducts: UserProductScreen,
+    EditProduct: EditProdcutScreen,
   },
   {
     navigationOptions: {
