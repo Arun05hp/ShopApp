@@ -22,6 +22,7 @@ const ProductsOverviewScreen = (props) => {
   return (
     <FlatList
       data={products}
+      keyExtractor={(item) => item.id}
       renderItem={(itemData) => (
         <ProductItem
           image={itemData.item.imageUrl}
